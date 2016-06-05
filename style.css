@@ -1,101 +1,67 @@
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "PT Mono", monospace;
+  background-color: #141414;
+  color: white;
+  font-smooth: never;
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica, Arial;
   font-size: 16px;
-  line-height: 1.544em;
-}
-a {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-  padding-bottom: 1px;
-}
-#cover,
-#timeline {
-  padding: 50px 20px;
-}
-#cover {
-  width: 50%;
-  height: 100%;
-  position: fixed;
-}
-#cover h1 {
-  font-size: 2.66em;
-  line-height: 1.55em;
-  cursor: pointer;
-}
-#cover .filters {
-  margin: 20px;
-  margin-left: 0;
-}
-#cover .filters a,
-#cover .links a {
-  display: inline-block;
-  margin-right: 20px;
-}
-#timeline {
-  padding: 60px 20px;
-  list-style: none;
-  width: 50%;
-  margin-left: 50%;
-  -webkit-transform: rotate(20deg) skewX(20deg) scaleY(0.86);
-  -ms-transform: rotate(20deg) skewX(20deg) scaleY(0.86);
-  transform: rotate(20deg) skewX(20deg) scaleY(0.86);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-#timeline li {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  width: 100%;
-}
-#timeline li:first-child {
-  padding-top: 0em;
-}
-#timeline span {
-  display: block;
-}
-#ref-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 140px;
-  width: 140px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  z-index: 101;
-  display: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  background-color: black;
 }
 
-@media (max-width: 762px) {
-  #cover,
-  #timeline {
-    padding: 20px;
-    width: 100%;
-    position: relative;
-  }
-  #timeline {
-    margin-left: 0;
-  }
-  #cover .filters {
-    display: none;
-  }
+img {
+  max-height:80%;
+}
+
+.photo {
+  display: table-cell;
+  vertical-align: middle;
+  height: 90vh;
+  text-align: center;
+  padding: 20px;
+}
+
+li {
+padding-bottom: 13px;
+}
+
+br {
+  display: block;
+  margin: 13px 0;
+}
+
+.links a, .info a {
+  display: block;
+  padding-bottom: 13px;
+}
+
+.info, .links {
+  display: table-cell;
+  vertical-align: middle;
+  min-width: 350px;
+  height: 90vh;
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+a:link, a:visited, a:active {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
 }

@@ -1,68 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sam Sam">
-      <title>sam sam</title>
-      <link target="_blank" href="//fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/style.css">
-      </head>
-      <body>
-        <div id="cover"><h1 id="name">sam sam</h1><ol id="timeline"><li data-image="walker.jpg" class="job"><span class="title">We propose:</span>
-          To use our lives as platforms for art making. We aim to merge our work with the everyday. At times the process and the result are the same. We wish to further develop and unfold our own collaborative working partnership and the possibilities that it holds. <br><br>Is it possible to make art collaboratively whilst maintaining a sense of self? Can a collective spirit of individuality be achieved? <br><br>We pay respect to artists such as Gilbert and George and Fischli and Weiss. They are artists that grapple with themselves in the everyday environment that they live in. They disrupt/devalue hierarchies found in contemporary conventions in the art world and beyond, and play with their stigma.</li>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script><script>var THUMB_DIR = "thumbs/";
-
-var iso = new Isotope($("#timeline")[0], {
-  layoutMode: 'vertical',
-  itemSelector: "li"
-});
-
-function attachFilterEvent(clickSelector, filtereeSelector) {
-  var filterEl = document.querySelector(clickSelector);
-  $(filterEl).on("click", function(e) {
-    e.preventDefault();
-    iso.arrange({ filter: filtereeSelector });
-  })
-}
-
-attachFilterEvent('#name', '*');
-attachFilterEvent('.filter-art', '.art');
-attachFilterEvent('.filter-job', '.job');
-attachFilterEvent('.filter-school', '.school');
-
-function hoverImages() {
-  if ($(window).width() < 500) {
-    $("#ref-image").hide();
-    return;
-  }
-
-  // Preload images
-  $("[data-image]").each(function(i, el){
-    var thisImg = $(el).data("image");
-    var image = new Image();
-    image.src = THUMB_DIR + thisImg;
-  })
-
-  $(window).on("mousemove", function(e){
-    var x = e.clientX;
-    var y = e.clientY;
-    $("#ref-image").css({
-      left: x + 5 + "px",
-      top: y - 155 + "px"
-    });
-  });
-
-  $('li')
-    .on("mouseenter", function(e) {
-      var $this = $(this);
-      var thisImg = $this.data("image");
-      $("#ref-image").css("background-image", "url(" + THUMB_DIR + thisImg + ")").show()
-    })
-    .on("mouseleave", function(e) {
-      $("#ref-image").css("background-image", "").hide()
-    })
-}
-
-hoverImages();
-</script></html>
+<html>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Sam Sam</title>
+<meta name="description" content="sam sam">
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
+<body>
+  <div class="info">
+    <h1>Sam Sam</h1>
+    <h2>a manifesto</h2>
+    <br>
+    We propose:
+    <br>
+    <ol>
+      <li>To use our lives as platforms for art making. We aim to merge our work with the everyday. At times the process and the result are the same.</li>
+      <li>We wish to further develop and unfold our own collaborative working partnership and the possibilities that it holds.</li>
+      <li>Is it possible to make art collaboratively whilst maintaining a sense of self? Can a collective spirit of individuality be achieved?</li>
+      <li>We pay respect to artists such as Gilbert and George and Fischli and Weiss. They are artists that grapple with
+themselves in the everyday environment that they live in. They disrupt/devalue hierarchies found in contemporary
+conventions in the art world and beyond, and play with their stigma.</li>
+     
+    </ol>
+   
+  </div>
+  <div class="info">
+    <h3>Emily & Tom</h3> 
+  </div>
+  
+</body>
+</html>

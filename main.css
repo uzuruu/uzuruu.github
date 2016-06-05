@@ -1,8 +1,8 @@
 body {
     font-size: 16px;
-    background: #fdfbee;
+    background: #e8e8e8;
     color: #1d1e19;
-    font-family: "Courier New", Courier New, Arial, "Lucida Grande", sans-serif;
+    font-family: "Helvetica", Helvetica, Arial, sans;
     width: 100%;
     overflow-x: hidden;
 }
